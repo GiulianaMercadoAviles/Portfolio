@@ -1,0 +1,257 @@
+/* Limpieza inicial */
+.caso-estudio-page {
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Boton Volver */
+.btn-volver {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 100;
+  text-decoration: none;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-body);
+  font-weight: 600;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-volver:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft-hover);
+}
+
+/* Hero Section */
+.cs-hero {
+  padding: 10rem 1.5rem 12rem;
+  text-align: center;
+  background-color: var(--color-pink);
+  overflow: hidden;
+}
+
+.cs-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cs-tag {
+  display: inline-block;
+  background-color: var(--color-surface);
+  padding: 0.5rem 1.5rem;
+  transform: rotate(-2deg);
+  margin-bottom: -1rem;
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
+  color: var(--color-pink-text);
+}
+
+.cs-mockup-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Bento Box Section */
+.cs-bento-section {
+  padding: 4rem 1.5rem 8rem;
+  background-color: var(--color-bg);
+}
+
+.cs-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bento-box {
+  padding: 3.5rem;
+  border-radius: 40px; 
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease;
+}
+
+.bento-box:hover {
+  transform: translateY(-4px);
+}
+
+.bento-box h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  color: var(--color-chocolate);
+}
+
+.bg-pink { background-color: var(--color-pink); }
+.bg-blue { background-color: var(--color-blue); }
+.bg-olive { background-color: var(--color-olive); }
+.bg-surface { background-color: var(--color-surface); }
+.bg-yellow { background-color: var(--color-yellow); }
+.bg-chocolate { background-color: var(--color-chocolate); }
+
+.text-light h2, .text-light p {
+  color: var(--color-bg);
+}
+
+.bento-box:nth-child(1) { grid-column: span 8; }
+.bento-box:nth-child(2) { grid-column: span 4; }
+.bento-box:nth-child(3) { grid-column: span 7; }
+.bento-box:nth-child(4) { grid-column: span 5; }
+
+.rol-text {
+  font-family: var(--font-hand);
+  font-size: 3rem;
+  color: var(--color-blue-text);
+  transform: rotate(-4deg);
+  display: inline-block;
+}
+
+/* Pills in Bento */
+.cs-stack-box .pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.pill-soft {
+  background-color: var(--color-surface);
+  color: var(--color-chocolate);
+  border: 1px solid rgba(106, 66, 54, 0.05);
+  box-shadow: 0 4px 15px rgba(106, 66, 54, 0.02);
+}
+
+.accent-yellow { background-color: var(--color-yellow); border-color: var(--color-yellow); }
+.accent-blue { background-color: var(--color-blue-light); border-color: var(--color-blue-light); }
+.accent-peach { background-color: var(--color-peach); border-color: var(--color-peach); }
+.accent-mint { background-color: var(--color-mint); border-color: var(--color-mint); }
+
+.resaltado-suave {
+  background-color: var(--color-pink-pastel);
+  color: var(--color-pink-intense);
+  padding: 0 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Integraciones list */
+.cs-integraciones-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.cs-integraciones-box li {
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+.cs-integraciones-box li::before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* Tarjetas Clean para Proceso */
+.clean-bento-card {
+  background-color: var(--color-surface);
+  padding: 3rem;
+  border-radius: 40px;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+.clean-bento-card .cs-mockup-placeholder {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  box-shadow: none;
+  background-color: var(--color-bg);
+}
+
+.clean-bento-card.rotada-inversa {
+  transform: translateY(2rem); /* En lugar de rotar, desfasamos ligeramente en Y para el efecto collage limpio */
+}
+
+/* Gallery */
+.cs-gallery-section {
+  padding: 4rem 1.5rem 10rem;
+  background-color: var(--color-bg);
+  text-align: center;
+}
+
+.cs-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.cs-gallery-grid h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+/* Footer */
+.cs-footer {
+  padding: 8rem 1.5rem;
+  text-align: center;
+  background-color: var(--color-blue);
+}
+
+.btn-soft {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: none;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-soft:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft-hover);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cs-bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-box {
+    grid-column: span 1 !important;
+  }
+  .cs-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .clean-bento-card.rotada-inversa {
+    transform: none;
+  }
+}

@@ -1,0 +1,99 @@
+.sobre {
+  position: relative;
+  padding: 15rem 10rem; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 90vw;
+  margin: 0 10rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre-card {
+  background: var(--color-blue-pastel);
+  border-radius: 32px;
+  padding: 8rem 5rem;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  text-align: left;
+  
+}
+
+.sobre-card h2 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--color-burgundy);
+  margin: 0 0 1.5rem;
+  line-height: 1;
+}
+
+.sobre-card p {
+  color: var(--color-text);
+  line-height: 1.8;
+  font-size: 1.15rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.sobre-card:hover {
+  transform: translateY(-4px);
+}
+
+.sobre-sticker {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: var(--color-blue-intense);
+  color: var(--color-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  transform: rotate(4deg);
+  z-index: 2;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.sobre-contenido:has(.sobre-card:hover) .sobre-sticker {
+  transform: translateY(-4px) rotate(7deg);
+  transition: transform 0.3s ease;
+}
+
+.frase-gigante {
+  font-family: var(--font-body);
+  font-size: 5rem;
+  text-transform: uppercase; 
+  line-height: 0.9; 
+  letter-spacing: -2px; 
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 5rem;
+  
+}
+
+.frase-gigante-container {
+  background-color: var(--color-pink-pastel); 
+  padding: 10rem 1.5rem;
+  text-align: center;
+  position: relative
+}
+
+.sobre-intro {
+  text-align: center;
+  margin: 8rem;
+}
+
+@media (max-width: 768px) {
+  .sobre-card {
+    padding: 5rem 2rem;
+  }
+}

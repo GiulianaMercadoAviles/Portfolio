@@ -1,0 +1,58 @@
+.proyectos {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bg);
+  padding: 12rem 1.5rem;
+  overflow: hidden;
+  margin-bottom: 7rem;
+}
+
+.proyectos-container {
+  margin: 0 10rem;
+}
+
+.proyectos-header {
+  text-align: center;
+}
+
+.proyectos-header h2 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--color-burgundy);
+  margin: 2rem;
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+  gap: 2.7rem;
+}
+
+.proyectos-practica-titulo {
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  margin: 6rem ;
+  text-align: center;
+}
+
+.proyectos-grid.practica {
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+  gap: 2rem;
+}
+
+.fondo-palabras {
+  position: absolute;
+  top: 0;
+  left: -2%;
+  width: 100%;
+  font-size: 16vw; 
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1; 
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.038);
+  z-index: 0; 
+  user-select: none;
+  pointer-events: none;
+}

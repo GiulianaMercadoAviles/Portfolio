@@ -1,0 +1,24 @@
+.wave-divider {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 5;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 2px);
+  height: 80px;
+}
+
+.wave-bottom {
+  bottom: -1px;
+  transform: rotate(180deg);
+}
+
+.wave-top {
+  top: -8px;
+}

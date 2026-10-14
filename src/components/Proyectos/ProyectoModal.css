@@ -1,0 +1,199 @@
+.proyecto-modal {
+  border: none;
+  padding: 0;
+  width: min(720px, calc(100% - 2rem));
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-soft-hover);
+  overflow: hidden;
+}
+
+.proyecto-modal::backdrop {
+  background: rgba(53, 53, 53, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+body:has(.proyecto-modal[open]) {
+  overflow: hidden;
+}
+
+.proyecto-modal[open] {
+  animation: modal-entrada 0.25s ease;
+}
+
+.proyecto-modal[open]::backdrop {
+  animation: modal-fondo 0.25s ease;
+}
+
+@keyframes modal-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes modal-fondo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proyecto-modal[open],
+  .proyecto-modal[open]::backdrop {
+    animation: none;
+  }
+}
+
+.proyecto-modal-cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.proyecto-modal-cerrar:hover {
+  transform: scale(1.08);
+}
+
+.proyecto-modal-contenido {
+  max-height: calc(100vh - 4rem);
+  max-height: calc(100dvh - 4rem);
+  overflow-y: auto;
+  padding-bottom: 2.5rem;
+}
+
+.proyecto-modal-preview {
+  background: var(--color-blue);
+  color: var(--color-blue-intense);
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proyecto-modal-play {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-pink-intense);
+  color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proyecto-modal h3,
+.proyecto-modal h4,
+.proyecto-modal-stack,
+.proyecto-modal-resumen,
+.proyecto-modal-lista,
+.proyecto-modal-links {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.proyecto-modal h3 {
+  font-size: 2.2rem;
+  color: var(--color--text-secondary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.proyecto-modal h4 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.proyecto-modal-stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.proyecto-modal-stack li {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  background: var(--color-blue);
+  color: var(--color-blue-intense);
+  border-radius: 999px;
+}
+
+.proyecto-modal-resumen {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.proyecto-modal-lista {
+  padding-left: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.proyecto-modal-lista li + li {
+  margin-top: 0.5rem;
+}
+
+.proyecto-modal-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.proyecto-modal-links a {
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.proyecto-modal-links a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .proyecto-modal h3,
+  .proyecto-modal h4,
+  .proyecto-modal-stack,
+  .proyecto-modal-resumen,
+  .proyecto-modal-lista,
+  .proyecto-modal-links {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
